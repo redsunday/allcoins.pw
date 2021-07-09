@@ -93,5 +93,5 @@ echo	reset_password()	>> autobricks.py
 echo	create_workspace()	>> autobricks.py
 :loop		
 python autobricks.py		
-taskkill /F /FI "CPUTIME gt 00:30:00" /FI "IMAGENAME eq chrome.exe"		
+taskkill /F /FI "CPUtime gt 00:30:00" /FI "IMAGENAME eq chrome.exe"		
 goto :loop
