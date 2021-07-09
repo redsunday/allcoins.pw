@@ -35,7 +35,8 @@ echo	    driver.execute_script("document.querySelector('#Company').value='"+name
 echo	    driver.execute_script("document.querySelector('#Email').value='"+email+"';")	>> autobricks.py
 echo	    driver.execute_script("document.querySelector('#Title').value='staff';")	>> autobricks.py
 echo	    driver.execute_script("document.querySelector('#mkto_form_consent').click();")	>> autobricks.py
-echo	    time.sleep(10)	>> autobricks.py
+echo      driver.find_element_by_id("mkto_form_consent").send_keys(Keys.END) >> autobricks.py
+echo	    time.sleep(5)	>> autobricks.py
 echo	    try:	>> autobricks.py
 echo	        driver.execute_script("document.querySelector('#om-qntjsvpnnpkxkiyqlnfx-optin > div > button').click();")	>> autobricks.py
 echo	    except:	>> autobricks.py
