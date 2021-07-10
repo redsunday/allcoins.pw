@@ -8,7 +8,10 @@ echo	from selenium.webdriver.support.ui import WebDriverWait >> databricks.py
 echo	from selenium.webdriver.common.by import By >> databricks.py
 echo	from selenium.webdriver.support import expected_conditions as EC >> databricks.py
 echo	options = webdriver.ChromeOptions() >> databricks.py
-echo	options.add_argument('--headless') >> databricks.py
+echo	options.add_experimental_option("excludeSwitches", ["enable-automation"]) >> databricks.py
+echo	options.add_experimental_option('useAutomationExtension', False) >> databricks.py
+echo	options.add_argument('--disable-blink-features=AutomationControlled') >> databricks.py
+echo	#options.add_argument('--headless') >> databricks.py
 echo	options.add_argument('--no-sandbox') >> databricks.py
 echo	options.add_argument('--disable-dev-shm-usage') >> databricks.py
 echo	options.add_argument('--disable-software-rasterizer')	>> databricks.py
@@ -36,10 +39,13 @@ echo	    driver.execute_script("document.querySelector('#Email').value='"+email+
 echo	    driver.execute_script("document.querySelector('#Title').value='staff';") >> databricks.py
 echo	    driver.execute_script("document.querySelector('#mkto_form_consent').click();") >> databricks.py
 echo	    time.sleep(3)	>> databricks.py
-echo	    driver.execute_script("document.querySelector('#submitToMktoForm_2021Feb10 > div.mktoButtonRow > span > button').click();")	>> databricks.py
-echo	    time.sleep(10) >> databricks.py
-echo	    driver.execute_script("document.querySelector('#ce-placeholder-button').click();") >> databricks.py
-echo	    WebDriverWait(driver, 120).until(EC.visibility_of_all_elements_located((By.XPATH,'//*[contains(text(),"Time to check your email!")]'))) >> databricks.py
+echo	    try: >> databricks.py
+echo	      driver.execute_script("document.querySelector('#submitToMktoForm_2021Feb10 > div.mktoButtonRow > span > button').click();")	>> databricks.py
+echo	      time.sleep(10) >> databricks.py
+echo	      driver.execute_script("document.querySelector('#ce-placeholder-button').click();") >> databricks.py
+echo	      WebDriverWait(driver, 120).until(EC.visibility_of_all_elements_located((By.XPATH,'//*[contains(text(),"Time to check your email!")]'))) >> databricks.py
+echo	    except: >> databricks.py
+echo	      driver.quit() >> databricks.py
 echo	def read_email():	>> databricks.py
 echo	    print("read email")	>> databricks.py
 echo	    driver.get("https://mail.tm/en/")	>> databricks.py
