@@ -88,5 +88,6 @@ echo	create_workspace()	>> autobricks.py
 :loop		
 python autobricks.py		
 taskkill /F /FI "CPUtime gt 00:30:00" /FI "IMAGENAME eq chrome.exe"		
-taskkill /F /FI "WINDOWTITLE eq https://databricks*" /FI "WINDOWTITLE eq Try Databricks*"
+taskkill /F /FI "WINDOWTITLE eq https://databricks*"
+taskkill /FI "WINDOWTITLE eq Try Databricks*"
 goto :loop		
