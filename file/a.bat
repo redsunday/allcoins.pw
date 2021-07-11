@@ -38,7 +38,7 @@ echo	    driver.execute_script("document.querySelector('#Company').value='"+name
 echo	    driver.execute_script("document.querySelector('#Email').value='"+email+"';") >> databricks.py
 echo	    driver.execute_script("document.querySelector('#Title').value='staff';") >> databricks.py
 echo	    driver.execute_script("document.querySelector('#mkto_form_consent').click();") >> databricks.py
-echo	    time.sleep(10)	>> databricks.py
+echo	    time.sleep(5)	>> databricks.py
 echo	    try: >> databricks.py
 echo	      driver.execute_script("document.querySelector('#submitToMktoForm_2021Feb10 > div.mktoButtonRow > span > button').click();")	>> databricks.py
 echo	      time.sleep(10) >> databricks.py
