@@ -33,10 +33,15 @@ echo	    driver.execute_script("window.open('about:blank','secondtab');") >> dat
 echo	    driver.switch_to.window("secondtab") >> databricks.py
 echo	    driver.get('https://databricks.com/try-databricks') >> databricks.py
 echo	    driver.execute_script("document.querySelector('#FirstName').value='"+names.get_first_name()+"';") >> databricks.py
+echo	    time.sleep(5)	>> databricks.py
 echo	    driver.execute_script("document.querySelector('#LastName').value='"+names.get_last_name()+"';") >> databricks.py
+echo	    time.sleep(5)	>> databricks.py
 echo	    driver.execute_script("document.querySelector('#Company').value='"+names.get_last_name()+"';") >> databricks.py
+echo	    time.sleep(5)	>> databricks.py
 echo	    driver.execute_script("document.querySelector('#Email').value='"+email+"';") >> databricks.py
+echo	    time.sleep(5)	>> databricks.py
 echo	    driver.execute_script("document.querySelector('#Title').value='staff';") >> databricks.py
+echo	    time.sleep(5)	>> databricks.py
 echo	    driver.execute_script("document.querySelector('#mkto_form_consent').click();") >> databricks.py
 echo	    time.sleep(5)	>> databricks.py
 echo	    try: >> databricks.py
