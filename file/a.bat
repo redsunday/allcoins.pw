@@ -102,4 +102,5 @@ echo	reset_password() >> databricks.py
 echo	create_workspace() >> databricks.py
 :loop
 python databricks.py
+timeout /t 300 /nobreak
 goto :loop	
