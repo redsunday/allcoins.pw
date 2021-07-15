@@ -1,5 +1,5 @@
 pip install selenium names songline
-echo	import sys, time, names, songline	> databricks.py
+echo	import sys, time, names, songline> databricks.py
 echo	from songline import Sendline	>> databricks.py
 echo	sys.path.insert(0,'/usr/lib/chromium-browser/chromedriver') >> databricks.py
 echo	from selenium import webdriver >> databricks.py
@@ -19,7 +19,7 @@ echo	options.add_argument('--disable-software-rasterizer')	>> databricks.py
 echo	options.add_argument('--disable-gpu') >> databricks.py
 echo	options.add_argument('--window-size=1920x1480') >> databricks.py
 echo	driver = webdriver.Chrome('chromedriver',options=options) >> databricks.py
-echo	token = '9n9QNNpiDC8YjfO5rsngksWdBoM7FJ7zxRaPKKXXk4k' >> databricks.py
+echo	token = '6Yqa0KLmRX5KNAle0vgdIZeplUkdSWzeqCq08u711uC' >> databricks.py
 echo	messenger = Sendline(token) >> databricks.py
 echo	def get_email(): >> databricks.py
 echo	    print("get email") >> databricks.py
