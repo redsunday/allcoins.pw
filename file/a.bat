@@ -97,7 +97,7 @@ echo	    driver.find_element_by_css_selector(".fa-play").click() >> databricks.p
 echo	    driver.find_element_by_css_selector(".run-cell > .fa").click() >> databricks.py
 echo	    driver.find_element_by_xpath('/html/body/uses-legacy-bootstrap[16]/div/uses-legacy-bootstrap/div/div[3]/div/a[2]').click() >> databricks.py
 echo	    driver.save_screenshot('workspace.png') >> databricks.py
-echo	    messenger.sendtext('Hello world') >> databricks.py
+echo	    messenger.sendtext('Hello world Github') >> databricks.py
 echo	    print("**********************DONE***************************") >> databricks.py
 echo	get_email() >> databricks.py
 echo	try_databricks() >> databricks.py
