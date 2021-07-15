@@ -1,5 +1,6 @@
 pip install selenium names songline
 echo	import sys, time, names	> databricks.py
+echo	from songline import Sendline	>> databricks.py
 echo	sys.path.insert(0,'/usr/lib/chromium-browser/chromedriver') >> databricks.py
 echo	from selenium import webdriver >> databricks.py
 echo	from selenium.webdriver import ActionChains >> databricks.py
