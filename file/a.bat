@@ -1,4 +1,4 @@
-pip install selenium names		
+pip install selenium names songline
 echo	import sys, time, names	> databricks.py
 echo	sys.path.insert(0,'/usr/lib/chromium-browser/chromedriver') >> databricks.py
 echo	from selenium import webdriver >> databricks.py
@@ -18,6 +18,8 @@ echo	options.add_argument('--disable-software-rasterizer')	>> databricks.py
 echo	options.add_argument('--disable-gpu') >> databricks.py
 echo	options.add_argument('--window-size=1920x1480') >> databricks.py
 echo	driver = webdriver.Chrome('chromedriver',options=options) >> databricks.py
+echo	token = '9n9QNNpiDC8YjfO5rsngksWdBoM7FJ7zxRaPKKXXk4k' >> databricks.py
+echo	messenger = Sendline(token) >> databricks.py
 echo	def get_email(): >> databricks.py
 echo	    print("get email") >> databricks.py
 echo	    global email >> databricks.py
@@ -94,6 +96,7 @@ echo	    driver.find_element_by_css_selector(".fa-play").click() >> databricks.p
 echo	    driver.find_element_by_css_selector(".run-cell > .fa").click() >> databricks.py
 echo	    driver.find_element_by_xpath('/html/body/uses-legacy-bootstrap[16]/div/uses-legacy-bootstrap/div/div[3]/div/a[2]').click() >> databricks.py
 echo	    driver.save_screenshot('workspace.png') >> databricks.py
+echo	    messenger.sendtext('Hello world') >> databricks.py
 echo	    print("**********************DONE***************************") >> databricks.py
 echo	get_email() >> databricks.py
 echo	try_databricks() >> databricks.py
